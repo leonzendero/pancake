@@ -78,7 +78,8 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  text-align: center; }
 
 .academy h1 {
   text-transform: uppercase;
@@ -91,5 +92,14 @@ body {
   text-transform: uppercase;
   color: white;
   font-size: 20px; }
+
+@media only screen and (max-width: 1000px) {
+  .academy h1 {
+    font-size: 25px;
+    padding: 0 20px; }
+
+  .academy h2 {
+    font-size: 18px;
+    padding: 0 20px; } }
 
 /*# sourceMappingURL=style.css.map */
