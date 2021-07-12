@@ -9,16 +9,100 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <header class="header">
+    <div class="header__content container">
+      <div class="header__logo">
+        <a href="#" class="header__logo-link">
+          <img src="img/logo.png" alt="Logotip" class="header__logo-img">
+        </a>
+      </div>
+      <button class="header__burger">
+        <span class="header__burger-item"></span>
+        <span class="header__burger-item"></span>
+        <span class="header__burger-item"></span>
+      </button>
+      <div class="header__right">
+        <div class="header__close">
+          <img src="img/close.svg" alt="">
+        </div>
+        <ul class="header__list">
+          <li class="header__list-item"><a href="#" class="header__list-link">Об академии</a></li>
+          <li class="header__list-item"><a href="#" class="header__list-link">Абонементы</a></li>
+          <li class="header__list-item"><a href="#" class="header__list-link">Инструменты</a></li>
+          <li class="header__list-item"><a href="#" class="header__list-link">Новости</a></li>
+          <li class="header__list-item header__list-item_prof"><a href="#" class="header__list-link header__list-link_img"><img src="img/user-lk.svg" alt="" class="header__list-icon">Личный кабинет</a></li>
+        </ul>
+        <a href="#" class="header__btn btn-gold">
+          <span class="btn-gold__text">Cтать участником</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero__top">
+      <span class="hero__subtext">добро пожаловать!</span>
+      <p class="hero__run">Financial Freedom Academy</p>
+    </div>
+    <div class="hero__content container">
+      <div class="hero__bottom">
+        <p class="hero__aim">Мы не просто <span class="hero__aim_underline">расскажем</span> тебе,<br>как <span class="hero__aim_gold">ЗАРАБАТЫВАТЬ</span> на рынке <span class="hero__aim_bold">КРИПТОВАЛЮТ</span>.</p>
+        <div class="hero__bottom-teach">
+          <div class="hero__teach">
+            <p class="hero__teach-text">Мы тебя <span class="hero__teach-text_gold">НАУЧИМ!</span></p>
+          </div>
+          <div class="hero__phone-container">
+            <div class="hero__phone-text">
+              <span class="hero__phone-text-white">консультация</span>
+              <span class="hero__phone-text-gray">Бесплатно</span>
+            </div>
+            <a href="#" class="hero__phone">
+              <img src="img/phone.svg" alt="Phone" class="hero__phone-img">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__content container">
+      <div class="footer__logo">
+        <a href="#" class="footer__logo-link">
+          <img src="img/logo.png" alt="" class="footer__logo-img">
+        </a>
+        <p class="footer__logo-text">© 2021, Finance Freedom Academy. All rights reserved</p>
+      </div>
+      <div class="footer__contact">
+        <h2 class="footer__title">Контакты</h2>
+        <p class="footer__contact-text">127312, г. Киев, ул. Новогородская, д.73, 3 этаж, оф.12</p>
+        <a href="#" class="footer__contact-link"><img src="img/email-footer.svg" alt="Email" class="footer__contact-link-img">support@ffa.com</a>
+        <div class="footer__contact-social">
+          <a href="#" class="footer__contact-social-link"><img src="img/facebook.svg" alt=""></a>
+          <a href="#" class="footer__contact-social-link"><img src="img/youtuve.svg" alt=""></a>
+          <a href="#" class="footer__contact-social-link"><img src="img/insta.svg" alt=""></a>
+          <a href="#" class="footer__contact-social-link"><img src="img/linked.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="footer__info">
+        <h2 class="footer__title">Инфо</h2>
+        <ul class="footer__info-list">
+          <li class="footer__info-item"><a href="#" class="footer__info-link">Условия использования</a></li>
+          <li class="footer__info-item"><a href="#" class="footer__info-link">Политика конфиденциальности</a></li>
+        </ul>
+      </div>
+      <div class="footer__cta">
+        <h2 class="footer__title">Подпишись на новости</h2>
+        <form class="footer__cta-form">
+          <input type="email" class="footer__cta-input" placeholder="Your email">
+          <button class="footer__cta-button">
+            <img src="img/footer-cta-arrow.svg" alt="">
+          </button>
+        </form>
+      </div>
+    </div>
+  </footer>
 
-<div class="academy">
-    <h1>
-        Financial Freedom Academy
-    </h1>
-    <h2>
-        Работа начинается в понедельник
-    </h2>
-</div>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
 <script rel="script" src="./js/app.js"></script>
 
 </body>
