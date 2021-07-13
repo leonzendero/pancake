@@ -1,10 +1,19 @@
 window.onload = function() {
-  $(function() {
+
+  if (window.innerWidth >= 992) {
     $('.hero__run').marquee({
       duration: 9000,
       startVisible: false,
       duplicated: true
     });
+  }
+
+  window.addEventListener('resize', function() {
+
+    if (window.onload.innerWidth < 992) {
+
+      $(".hero__run").marquee('destroy');
+    }
   });
 
 

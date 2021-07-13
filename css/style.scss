@@ -309,11 +309,13 @@ html {
       background: rgba(11, 31, 42, 0.8);
       backdrop-filter: blur(10px);
       opacity: 0;
+      pointer-events: none;
       transition: opacity 0.3s;
     }
 
     &.active::before {
       opacity: 1;
+      pointer-events: auto;
     }
   }
 
@@ -410,7 +412,6 @@ html {
 
 .hero {
   position: relative;
-  // height: 900px;
   padding: 338px 0 88px;
   background: url(../img/first-bg.jpg) center / cover no-repeat;
 
@@ -545,9 +546,10 @@ html {
   }
 
   &__teach {
+    // padding-left: 430px;
+    margin-left: calc(80px + (430 - 80) * ((100vw - 992px) / (1440 - 992)));
 
     &-text {
-      padding-left: 430px;
       font-family: var(--font-dis);
       font-size: 50px;
       line-height: 52px;
@@ -618,6 +620,7 @@ html {
     &-container {
       display: flex;
       align-items: center;
+      padding-right: 90px;
     }
 
     &-text {
@@ -648,6 +651,44 @@ html {
         font-size: 15px;
         line-height: 18px;
         color: #546269;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    padding: 240px 0 80px;
+
+    &__top {
+      margin: 0 auto;
+      margin-bottom: 43px;
+      padding: 0 20px;
+      max-width: 1420px;
+    }
+
+    &__subtext {
+      margin-bottom: 0;
+      max-width: 370px;
+      font-size: 15px;
+      line-height: 30px;
+      text-align: left;
+    }
+
+    &__run {
+      overflow: unset;
+      font-size: 45px;
+      line-height: 50px;
+    }
+
+    &__aim {
+      padding-left: 45px;
+
+      &::before {
+        left: 15px;
+        top: -23px;
+        width: 109px;
+        height: 109px;
       }
     }
   }
