@@ -691,6 +691,71 @@ html {
         height: 109px;
       }
     }
+
+    &__bottom {
+
+      &-teach {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    &__teach {
+      margin-left: 0;
+
+      &-text {
+        margin-bottom: 45px;
+        padding-left: 80px;
+        font-size: 26px;
+        line-height: 22px;
+      }
+    }
+
+    &__phone {
+
+      &-container {
+        padding: 0;
+        padding-left: 45px;
+      }
+    }
+
+    @keyframes phoneAnim {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    padding: 151px 0 60px;
+
+    &__aim {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero {
+
+    &__subtext {
+      font-size: 13px;
+      line-height: 26px;
+    }
+
+    &__aim {
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
 }
 
