@@ -58,4 +58,77 @@ window.onload = function() {
       }
     });
   }
+
+
+
+  // ========
+  // acc ===
+
+  !function (i) {
+        let o, n;
+
+        i(".acc-heading").on("click", function () {
+
+            o = i(this).parents(".acc"), n = o.find(".acc-content"),
+
+
+                o.hasClass("active")
+                    ? (o.removeClass("active"), n.slideUp())
+
+                    : (o.addClass("active"),
+                        n.stop(!0, !0).slideDown(),
+                        o.siblings("a").removeClass("active").children(".acc-content").stop(!0, !0).slideUp())
+        })
+    }(jQuery);
+
+  // acc ===
+  // ========
+
+
+
+  // =================
+  // card tooltip ===
+
+  const card = document.querySelector('.card');
+
+  if (card) {
+    const cardToolBtn = document.querySelectorAll('.card__block-item-heading img');
+    const cardToolContent = document.querySelectorAll('.card__block-item-content');
+    const cardQue = document.querySelectorAll('.card__que');
+    const cardQueTool = document.querySelectorAll('.card__que-tool');
+
+    for (let i = 0; i < cardToolBtn.length; i++) {
+
+      cardToolBtn[i].addEventListener('mouseenter', function() {
+        // cardToolContent[i].classList.add('active');
+        $($('.card__block-item-content').get(i)).fadeIn(300);
+      });
+    }
+
+    for (let i = 0; i < cardToolBtn.length; i++) {
+
+      cardToolBtn[i].addEventListener('mouseleave', function() {
+        // cardToolContent[i].classList.remove('active');
+        $($('.card__block-item-content').get(i)).fadeOut(300);
+      });
+    }
+
+
+    for (let i = 0; i < cardQue.length; i++) {
+
+      cardQue[i].addEventListener('mouseenter', function() {
+        cardQueTool[i].classList.add('active');
+      });
+    }
+
+    for (let i = 0; i < cardQue.length; i++) {
+
+      cardQue[i].addEventListener('mouseleave', function() {
+        cardQueTool[i].classList.remove('active');
+      });
+    }
+  }
+
+  // card tooltip ===
+  // =================
 }
