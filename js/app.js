@@ -131,4 +131,13 @@ window.onload = function() {
 
   // card tooltip ===
   // =================
+
+  const swiper = new Swiper(".article-slider", {
+    slidesPerView: 3,
+    spaceBetween: 32,
+    navigation: {
+      nextEl: ".article-slider-right",
+      prevEl: ".article-slider-left",
+    },
+  });
 }
