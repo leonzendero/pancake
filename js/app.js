@@ -57,6 +57,35 @@ window.onload = function() {
         headerRemove();
       }
     });
+
+
+    let lastScrollTop = 0;
+
+    document.addEventListener('scroll', () => {
+
+
+      // Remove mobile header when scrolling
+      // nav.classList.remove('header__nav--active');
+      // burger.classList.remove('burger--active');
+
+
+      let scrollSize = window.pageYOffset;
+
+
+      if (lastScrollTop > scrollSize) {
+        header.classList.remove('header--bottom');
+        header.classList.add('header--top');
+
+      } else if (lastScrollTop < scrollSize) {
+        header.classList.remove('header--top');
+        header.classList.add('header--bottom');
+      }
+
+      lastScrollTop = scrollSize;
+
+
+      window.pageYOffset > 1 ? header.classList.add('header--scroll') : header.classList.remove('header--scroll');
+    });
   }
 
 
@@ -97,19 +126,26 @@ window.onload = function() {
     const cardQue = document.querySelectorAll('.card__que');
     const cardQueTool = document.querySelectorAll('.card__que-tool');
 
+    const CARD_TOOL_SPEED = 150;
+
+
     for (let i = 0; i < cardToolBtn.length; i++) {
 
       cardToolBtn[i].addEventListener('mouseenter', function() {
-        // cardToolContent[i].classList.add('active');
-        $($('.card__block-item-content').get(i)).fadeIn(300);
+
+        if (window.innerWidth >= 992) {
+          $($('.card__block-item-content').get(i)).fadeIn(CARD_TOOL_SPEED);
+        }
       });
     }
 
     for (let i = 0; i < cardToolBtn.length; i++) {
 
       cardToolBtn[i].addEventListener('mouseleave', function() {
-        // cardToolContent[i].classList.remove('active');
-        $($('.card__block-item-content').get(i)).fadeOut(300);
+
+        if (window.innerWidth >= 992) {
+          $($('.card__block-item-content').get(i)).fadeOut(CARD_TOOL_SPEED);
+        }
       });
     }
 
@@ -126,6 +162,30 @@ window.onload = function() {
       cardQue[i].addEventListener('mouseleave', function() {
         cardQueTool[i].classList.remove('active');
       });
+    }
+
+    if (window.innerWidth < 992) {
+
+      const cardblockItem = document.querySelectorAll('.card__block-item');
+      const cardblockItemHeading = document.querySelectorAll('.card__block-item-heading');
+      const cardblockItemContent = document.querySelectorAll('.card__block-item-content');
+
+      !function (i) {
+          let o, n;
+
+          i(".card__block-item-heading").on("click", function () {
+
+              o = i(this).parents(".card__block-item"), n = o.find(".card__block-item-content"),
+
+
+                  o.hasClass("active")
+                      ? (o.removeClass("active"), n.slideUp())
+
+                      : (o.addClass("active"),
+                          n.stop(!0, !0).slideDown(),
+                          o.siblings("a").removeClass("active").children(".card__block-item-content").stop(!0, !0).slideUp())
+          })
+      }(jQuery);
     }
   }
 
