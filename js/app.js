@@ -310,15 +310,18 @@ window.onload = function() {
 
       320: {
         slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 0,
       },
 
-      330: {
+      600: {
         slidesPerView: 3,
-        centeredSlides: true,
+        spaceBetween: 30,
       },
 
       970: {
         slidesPerView: 'auto',
+        centeredSlides: false,
       }
     }
   });
