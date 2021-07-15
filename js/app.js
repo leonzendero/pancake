@@ -291,4 +291,35 @@ window.onload = function() {
       }
     }
   });
+
+  const whySwiper = new Swiper('.why__slider-container', {
+    slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 30,
+
+    navigation: {
+      nextEl: ".why__slider-button-next",
+      prevEl: ".why__slider-button-prev",
+    },
+
+    scrollbar: {
+      el: '.why__slider-scrollbar',
+    },
+
+    breakpoints: {
+
+      320: {
+        slidesPerView: 1,
+      },
+
+      330: {
+        slidesPerView: 3,
+        centeredSlides: true,
+      },
+
+      970: {
+        slidesPerView: 'auto',
+      }
+    }
+  });
 }

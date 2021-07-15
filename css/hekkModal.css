@@ -1,0 +1,40 @@
+.modal {
+  display: none;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal,
+.modal__dark {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.modal.modal-overflow-scroll {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.modal__dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1119;
+}
+
+.modal__dark.modal-overflow-scroll {
+  position: relative;
+  padding:  50px 0;
+}
+
+.modal__body {
+  border-radius: 35px;
+  padding:  30px 40px;
+  max-width: 300px;
+  background: #ddd;
+}
