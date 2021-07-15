@@ -1577,6 +1577,9 @@ body {
       transition: 0.4s ease-in-out; }
       .article-slider-left:hover, .article-slider-right:hover {
         opacity: 0.6; }
+      @media screen and (max-width: 1270px) {
+        .article-slider-left, .article-slider-right {
+          display: none; } }
     .article-slider-text {
       padding-left: 21px;
       position: relative;
@@ -1598,12 +1601,33 @@ body {
       height: 250px;
       object-fit: cover;
       margin-bottom: 13px; }
+      @media screen and (max-width: 1270px) {
+        .article-slider-img {
+          max-width: none;
+          width: 100%;
+          height: auto;
+          max-height: 250px; } }
   .article .article-container-slider {
     position: relative;
     max-width: 1281px;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px; }
+    @media screen and (max-width: 600px) {
+      .article .article-container-slider {
+        padding: 0; }
+        .article .article-container-slider .swiper-container {
+          overflow: inherit; }
+        .article .article-container-slider .swiper-slide {
+          transition: transform 0.3s; }
+          .article .article-container-slider .swiper-slide.swiper-slide-prev, .article .article-container-slider .swiper-slide.swiper-slide-next {
+            z-index: 1; }
+          .article .article-container-slider .swiper-slide.swiper-slide-prev {
+            transform: scale(0.65) translateX(50%); }
+          .article .article-container-slider .swiper-slide.swiper-slide-next {
+            transform: scale(0.65) translateX(-50%); }
+          .article .article-container-slider .swiper-slide.swiper-slide-active {
+            z-index: 2; } }
   @media only screen and (max-width: 425px) {
     .article {
       margin-top: 120px; } }
@@ -1866,6 +1890,9 @@ body {
     @media only screen and (max-width: 890px) {
       .article__wrapper-item-4 {
         flex-direction: column; } }
+    @media screen and (max-width: 600px) {
+      .article__wrapper-item-4 {
+        margin-bottom: 30px; } }
     .article__wrapper-item-4-art {
       margin-left: 90px; }
       @media only screen and (max-width: 1000px) {

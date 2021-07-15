@@ -229,6 +229,25 @@ window.onload = function() {
       nextEl: ".article-slider-right",
       prevEl: ".article-slider-left",
     },
+
+    breakpoints: {
+      
+      320: {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 0,
+      },
+
+      600: {
+        slidesPerView: 2,
+        centeredSlides: false,
+        spaceBetween: 32,
+      },
+
+      1270: {
+        slidesPerView: 3,
+      }
+    }
   });
 
   const sobSwiper1 = new Swiper('.sob__slider-1', {
