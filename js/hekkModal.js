@@ -87,3 +87,8 @@ let modal1 = new HekkModal('.modal', {
   btnOpen: '.modal-button',
   btnClose: '.modal-close',
 });
+
+let modal2 = new HekkModal('.modal', {
+  btnOpen: '.modal-button',
+  btnClose: '.modal-close',
+});
