@@ -1,5 +1,8 @@
 window.onload = function() {
 
+  const runText = document.querySelector('.hero__run');
+  runText.classList.add('active');
+
 	if (window.innerWidth >= 992) {
 		$('.hero__run').marquee({
 			duration: 9000,
