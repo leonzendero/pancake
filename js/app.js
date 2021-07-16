@@ -216,12 +216,14 @@ window.onload = function() {
     for (let i = 0; i < modalNext.length; i++) {
       modalBtn[i].addEventListener('click', function () {
         modalNext[i].classList.add('active');
+        modalNext[i].style.display = 'block';
         modalPrev[i].style.display = 'none';
       });
 
       modalBtnBack[i].addEventListener('click', function () {
         modalNext[i].classList.remove('active');
         modalPrev[i].style.display = 'block';
+        modalNext[i].style.display = 'none';
       });
     }
 	}
@@ -254,6 +256,9 @@ window.onload = function() {
 
 	// inst ===
 	// =========
+
+
+
 
 	const swiper = new Swiper(".article-slider", {
 		slidesPerView: 3,
@@ -288,6 +293,9 @@ window.onload = function() {
 		loop: true,
 		spaceBetween: 20,
 		// effect: 'flip',
+    observeParents: true,
+    observeSlideChildren: true,
+    observer: true,
 
 		navigation: {
 			nextEl: ".sob__slider-buttons-button-1-2",
@@ -318,6 +326,9 @@ window.onload = function() {
 		slidesPerView: 2,
 		spaceBetween: 20,
 		// effect: 'slide',
+    observeParents: true,
+    observeSlideChildren: true,
+    observer: true,
 
 		navigation: {
 			nextEl: ".sob__slider-buttons-button-2-2",
@@ -377,4 +388,38 @@ window.onload = function() {
 			}
 		}
 	});
+
+    // ========
+
+  const sobButtons = document.querySelectorAll('.sob__links-item');
+  const sobElem = document.querySelectorAll('.sob__sliders');
+
+  if (sobButtons) {
+
+    sobButtons[0].classList.add('active');
+    sobElem[0].classList.add('active');
+
+
+    for (let i = 0; i < sobButtons.length; i++) {
+
+      sobButtons[i].addEventListener('click', function() {
+
+        for (let i = 0; i < sobButtons.length; i++) {
+
+          sobButtons[i].classList.remove('active');
+          sobElem[i].classList.remove('active');
+        }
+
+        sobButtons[i].classList.add('active');
+        sobElem[i].classList.add('active');
+      });
+    }
+  }
+
+  $('.header__list-link').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top }, 1000);
+    e.preventDefault();
+  });
+
+  // ========
 }

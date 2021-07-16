@@ -22,6 +22,10 @@
   bottom: 0;
 }
 
+.modal__dark {
+  height: 100%;
+}
+
 .modal.modal-overflow-scroll {
   overflow: hidden;
   overflow-y: scroll;
