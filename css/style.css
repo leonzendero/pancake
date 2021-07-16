@@ -384,6 +384,7 @@ body {
       font-weight: 800;
       text-transform: uppercase; }
     .hero__aim_gold {
+      font-weight: 700;
       background-color: #e8c862;
       background: linear-gradient(289.3deg, #B57E10 -33.65%, #B57E10 4.46%, #E5C35C 83.65%, #F9DF7B 121.36%, #FFF3A6 148.55%, #F9DF7B 178.47%, #B57E10 219.27%);
       -webkit-background-clip: text;
@@ -2352,5 +2353,35 @@ body {
     font-size: 14px;
     line-height: 16px;
     text-align: center; } }
+.modal_wrapper-img {
+  padding: 70px 27px; }
+  .modal_wrapper-img-text {
+    margin-bottom: 48px;
+    font-family: var(--font-dis);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 17px;
+    text-align: right;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background-color: #e8c862;
+    background: linear-gradient(289.3deg, #B57E10 -33.65%, #B57E10 4.46%, #E5C35C 83.65%, #F9DF7B 121.36%, #FFF3A6 148.55%, #F9DF7B 178.47%, #B57E10 219.27%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .modal_wrapper-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; }
+
+.ffa-modal-1 .modal_wrapper-img {
+  background: #000; }
+
+.ffa-modal-2 .modal_wrapper-img {
+  background: linear-gradient(289.3deg, #B57E10 -33.65%, #B57E10 4.46%, #E5C35C 83.65%, #F9DF7B 121.36%, #FFF3A6 148.55%, #F9DF7B 178.47%, #B57E10 219.27%); }
+  .ffa-modal-2 .modal_wrapper-img-text {
+    color: #0B1F2A;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background: transparent; }
 
 /*# sourceMappingURL=style.css.map */
