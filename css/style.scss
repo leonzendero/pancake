@@ -3335,6 +3335,7 @@ body {
 
 .modal_wrapper-item {
     min-height: 709px;
+    transition: opacity 0.3s;
 }
 
 .modal_wrapper-item-block {
@@ -3516,6 +3517,12 @@ body {
 .modal-next {
     opacity: 0;
     pointer-events: none;
+    transition: opacity 0.3s;
+
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
 }
 
 .modal_wrapper-item-next-text {

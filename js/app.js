@@ -1,7 +1,11 @@
 window.onload = function() {
 
+
   const runText = document.querySelector('.hero__run');
-  runText.classList.add('active');
+
+  if (runText) {
+    runText.classList.add('active');
+  }
 
 	if (window.innerWidth >= 992) {
 		$('.hero__run').marquee({
@@ -202,24 +206,24 @@ window.onload = function() {
 		btnClose: '.modal-close-3'
 	});
 
-	const modalNext = document.querySelector('.modal-next');
-	const modalPrev = document.querySelector('.modal-prev');
-	const modalBtn = document.querySelector('.modal_wrapper-btn');
-	const modalBtnBack = document.querySelector('.modal_wrapper-item-back');
+	const modalNext = document.querySelectorAll('.modal-next');
+	const modalPrev = document.querySelectorAll('.modal-prev');
+	const modalBtn = document.querySelectorAll('.ffa-modal-open');
+	const modalBtnBack = document.querySelectorAll('.modal_wrapper-item-back');
 
 	if (modalNext) {
 
-		modalBtn.addEventListener('click', function () {
-			modalNext.style.opacity = '1';
-			modalNext.style.pointerEvents = 'auto';
-			modalPrev.style.display = 'none';
-		});
+    for (let i = 0; i < modalNext.length; i++) {
+      modalBtn[i].addEventListener('click', function () {
+        modalNext[i].classList.add('active');
+        modalPrev[i].style.display = 'none';
+      });
 
-		modalBtnBack.addEventListener('click', function () {
-			modalNext.style.opacity = '0';
-			modalNext.style.pointerEvents = 'none';
-			modalPrev.style.display = 'block';
-		});
+      modalBtnBack[i].addEventListener('click', function () {
+        modalNext[i].classList.remove('active');
+        modalPrev[i].style.display = 'block';
+      });
+    }
 	}
 
 	// =========
