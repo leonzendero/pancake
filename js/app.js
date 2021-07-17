@@ -303,7 +303,7 @@ window.onload = function() {
 		},
 
 		scrollbar: {
-			el: '.sob__scrollbar-1',
+			el: '.sob__scrollbar-1-normal',
 		},
 
 		breakpoints: {
@@ -336,7 +336,7 @@ window.onload = function() {
 		},
 
 		scrollbar: {
-			el: '.sob__scrollbar-2',
+			el: '.sob__scrollbar-2-normal',
 		},
 
 		breakpoints: {
@@ -354,6 +354,73 @@ window.onload = function() {
 			}
 		}
 	});
+
+  const sobSwiper12 = new Swiper('.sob__slider-1-2', {
+    slidesPerView: 2,
+    loop: true,
+    spaceBetween: 20,
+    // effect: 'flip',
+    observeParents: true,
+    observeSlideChildren: true,
+    observer: true,
+
+    navigation: {
+      nextEl: ".sob__slider-buttons-button-1-2",
+      prevEl: ".sob__slider-buttons-button-1-1",
+    },
+
+    scrollbar: {
+      el: '.sob__scrollbar-1-2',
+    },
+
+    breakpoints: {
+      
+      320: {
+        slidesPerView: 1,
+      },
+
+      695: {
+        slidesPerView: 2,
+      },
+
+      1150: {
+        slidesPerView: 1,
+      }
+    }
+  });
+
+  const sobSwiper22 = new Swiper('.sob__slider-2-2', {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    // effect: 'slide',
+    observeParents: true,
+    observeSlideChildren: true,
+    observer: true,
+
+    navigation: {
+      nextEl: ".sob__slider-buttons-button-2-2",
+      prevEl: ".sob__slider-buttons-button-2-1",
+    },
+
+    scrollbar: {
+      el: '.sob__scrollbar-2-2',
+    },
+
+    breakpoints: {
+
+      320: {
+        slidesPerView: 1,
+      },
+
+      695: {
+        slidesPerView: 2,
+      },
+
+      1150: {
+        slidesPerView: 1,
+      }
+    }
+  });
 
 	const whySwiper = new Swiper('.why__slider-container', {
 		slidesPerView: 'auto',
