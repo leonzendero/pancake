@@ -329,6 +329,7 @@ window.onload = function() {
     observeParents: true,
     observeSlideChildren: true,
     observer: true,
+    loop: true,
 
 		navigation: {
 			nextEl: ".sob__slider-buttons-button-2-2",
@@ -396,6 +397,7 @@ window.onload = function() {
     observeParents: true,
     observeSlideChildren: true,
     observer: true,
+    loop: true,
 
     navigation: {
       nextEl: ".sob__slider-buttons-button-2-2",
